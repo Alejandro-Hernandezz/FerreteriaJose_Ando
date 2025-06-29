@@ -7,18 +7,78 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity;
 
 namespace FerreteriaJose_Ando
 {
     public partial class Form1 : Form
     {
+        private FerreteriaDBEntities db = new FerreteriaDBEntities();
         public Form1()
         {
             InitializeComponent();
+            CargarDatosInicio();
+        }
+
+
+        private void CargarDatosInicio()
+        {
+            MostrarProductos();
+            MostrarVentasDelMes();
+            MostrarStockBajo();
+        }
+
+        private void MostrarProductos()
+        {
+            var productos = db.Producto
+                              .Select(p => new
+                              {
+                                  p.Id,
+                                  p.Nombre,
+                                  p.Precio,
+                                  p.Stock,
+                                  Categoria = p.Categoria.Nombre
+                              })
+                              .ToList();
+
+            dgvProductos.DataSource = productos;
+        }
+
+        private void MostrarVentasDelMes()
+        {
+            DateTime inicioMes = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
+
+            var ventas = db.Venta
+                           .Where(v => v.Fecha >= inicioMes)
+                           .Select(v => new
+                           {
+                               v.Id,
+                               v.Fecha,
+                               v.Total,
+                               Cliente = v.Cliente.Nombre
+                           })
+                           .ToList();
+
+            dgvVentaMes.DataSource = ventas;
         }
 
 
 
+        private void MostrarStockBajo()
+            {
+                var stockBajo = db.Producto
+                                  .Include(p => p.Categoria) 
+                                  .Where(p => p.Stock <= 5)
+                                  .Select(p => new
+                                  {
+                                      p.Nombre,
+                                      p.Stock,
+                                      Categoria = p.Categoria != null ? p.Categoria.Nombre : "Sin categoría"
+                                  })
+                                  .ToList();
+
+                dgvStockB.DataSource = stockBajo;
+            }
 
 
 
@@ -44,8 +104,7 @@ namespace FerreteriaJose_Ando
 
 
 
-
-        private void Form1_Load(object sender, EventArgs e)
+    private void Form1_Load(object sender, EventArgs e)
         {
           
         }

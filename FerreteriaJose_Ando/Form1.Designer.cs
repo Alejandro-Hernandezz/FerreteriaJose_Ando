@@ -39,7 +39,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.dgvVentaMes = new System.Windows.Forms.DataGridView();
+            this.dgvStockB = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVentaMes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStockB)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -163,10 +169,40 @@
             this.label4.Font = new System.Drawing.Font("Castellar", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(800, 374);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(285, 34);
+            this.label4.Size = new System.Drawing.Size(218, 34);
             this.label4.TabIndex = 3;
-            this.label4.Text = "VENTAS DEL MES";
+            this.label4.Text = "STOCK BAJO";
             this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // dgvProductos
+            // 
+            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductos.Location = new System.Drawing.Point(484, 102);
+            this.dgvProductos.Name = "dgvProductos";
+            this.dgvProductos.RowHeadersWidth = 51;
+            this.dgvProductos.RowTemplate.Height = 24;
+            this.dgvProductos.Size = new System.Drawing.Size(416, 244);
+            this.dgvProductos.TabIndex = 4;
+            // 
+            // dgvVentaMes
+            // 
+            this.dgvVentaMes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVentaMes.Location = new System.Drawing.Point(1054, 102);
+            this.dgvVentaMes.Name = "dgvVentaMes";
+            this.dgvVentaMes.RowHeadersWidth = 51;
+            this.dgvVentaMes.RowTemplate.Height = 24;
+            this.dgvVentaMes.Size = new System.Drawing.Size(416, 244);
+            this.dgvVentaMes.TabIndex = 5;
+            // 
+            // dgvStockB
+            // 
+            this.dgvStockB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStockB.Location = new System.Drawing.Point(634, 423);
+            this.dgvStockB.Name = "dgvStockB";
+            this.dgvStockB.RowHeadersWidth = 51;
+            this.dgvStockB.RowTemplate.Height = 24;
+            this.dgvStockB.Size = new System.Drawing.Size(653, 142);
+            this.dgvStockB.TabIndex = 6;
             // 
             // Form1
             // 
@@ -174,6 +210,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1494, 611);
+            this.Controls.Add(this.dgvStockB);
+            this.Controls.Add(this.dgvVentaMes);
+            this.Controls.Add(this.dgvProductos);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -183,6 +222,9 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVentaMes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStockB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,6 +243,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridView dgvProductos;
+        private System.Windows.Forms.DataGridView dgvVentaMes;
+        private System.Windows.Forms.DataGridView dgvStockB;
     }
 }
 
