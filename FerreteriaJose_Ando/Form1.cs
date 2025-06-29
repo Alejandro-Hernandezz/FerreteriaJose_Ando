@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
+using FerreteriaJose_Ando.Forms;
+
 
 namespace FerreteriaJose_Ando
 {
@@ -114,6 +116,12 @@ namespace FerreteriaJose_Ando
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ClienteForm clienteForm = new ClienteForm();
+            clienteForm.Show();
         }
     }
 }
