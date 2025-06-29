@@ -102,7 +102,8 @@ namespace FerreteriaJose_Ando
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Proveedores proveedoresForm = new Proveedores();
+            proveedoresForm.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
