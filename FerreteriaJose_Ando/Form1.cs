@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.Entity;
 using FerreteriaJose_Ando.Forms;
 
+
 namespace FerreteriaJose_Ando
 {
     public partial class Form1 : Form
@@ -113,6 +114,17 @@ namespace FerreteriaJose_Ando
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ClienteForm clienteForm = new ClienteForm();
+            clienteForm.Show();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
