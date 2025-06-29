@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
+using FerreteriaJose_Ando.Forms;
 
 namespace FerreteriaJose_Ando
 {
@@ -80,30 +81,6 @@ namespace FerreteriaJose_Ando
                 dgvStockB.DataSource = stockBajo;
             }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     private void Form1_Load(object sender, EventArgs e)
         {
           
@@ -121,12 +98,14 @@ namespace FerreteriaJose_Ando
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            ProductosForm formulario = new ProductosForm();
+            formulario.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Proveedores proveedoresForm = new Proveedores();
+            proveedoresForm.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
