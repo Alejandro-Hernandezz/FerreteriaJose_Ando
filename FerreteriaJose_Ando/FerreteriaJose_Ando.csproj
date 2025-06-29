@@ -68,11 +68,19 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+
+    <Compile Include="Forms\ProductosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProductosForm.Designer.cs">
+      <DependentUpon>ProductosForm.cs</DependentUpon>
+
     <Compile Include="Forms\ClienteForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\ClienteForm.Designer.cs">
       <DependentUpon>ClienteForm.cs</DependentUpon>
+
     </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -112,8 +120,13 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+
+    <EmbeddedResource Include="Forms\ProductosForm.resx">
+      <DependentUpon>ProductosForm.cs</DependentUpon>
+
     <EmbeddedResource Include="Forms\ClienteForm.resx">
       <DependentUpon>ClienteForm.cs</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Proveedores.resx">
       <DependentUpon>Proveedores.cs</DependentUpon>
