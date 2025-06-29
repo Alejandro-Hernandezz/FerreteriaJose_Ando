@@ -11,19 +11,20 @@ namespace FerreteriaJose_Ando
 {
     using System;
     using System.Collections.Generic;
-    
+
     public partial class Cliente
     {
         public Cliente()
         {
             this.Venta = new HashSet<Venta>();
         }
-    
+
         public int Id { get; set; }
         public string Nombre { get; set; }
         public string Telefono { get; set; }
         public string Email { get; set; }
-    
+
         public virtual ICollection<Venta> Venta { get; set; }
+
     }
 }
