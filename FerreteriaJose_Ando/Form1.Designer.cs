@@ -187,21 +187,21 @@
             // dgvVentaMes
             // 
             this.dgvVentaMes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVentaMes.Location = new System.Drawing.Point(1054, 102);
+            this.dgvVentaMes.Location = new System.Drawing.Point(1055, 102);
             this.dgvVentaMes.Name = "dgvVentaMes";
             this.dgvVentaMes.RowHeadersWidth = 51;
             this.dgvVentaMes.RowTemplate.Height = 24;
-            this.dgvVentaMes.Size = new System.Drawing.Size(416, 244);
+            this.dgvVentaMes.Size = new System.Drawing.Size(416, 210);
             this.dgvVentaMes.TabIndex = 5;
             // 
             // dgvStockB
             // 
             this.dgvStockB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStockB.Location = new System.Drawing.Point(634, 423);
+            this.dgvStockB.Location = new System.Drawing.Point(669, 426);
             this.dgvStockB.Name = "dgvStockB";
             this.dgvStockB.RowHeadersWidth = 51;
             this.dgvStockB.RowTemplate.Height = 24;
-            this.dgvStockB.Size = new System.Drawing.Size(653, 142);
+            this.dgvStockB.Size = new System.Drawing.Size(484, 142);
             this.dgvStockB.TabIndex = 6;
             // 
             // Form1
