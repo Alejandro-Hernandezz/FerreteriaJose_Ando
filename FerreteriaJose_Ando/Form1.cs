@@ -123,5 +123,10 @@ namespace FerreteriaJose_Ando
             ClienteForm clienteForm = new ClienteForm();
             clienteForm.Show();
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
